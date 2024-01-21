@@ -1,0 +1,166 @@
+[gd_scene load_steps=5 format=3 uid="uid://csdjkeyr6axkk"]
+
+[ext_resource type="PackedScene" uid="uid://bo0457gq5p4f6" path="res://scenes/ui_credit_link.tscn" id="1_g571m"]
+[ext_resource type="Script" path="res://scenes/ui_menu_buttons.gd" id="1_ltdu2"]
+[ext_resource type="Script" path="res://scenes/ui_credit_link.gd" id="2_aqwsh"]
+[ext_resource type="Texture2D" uid="uid://bkd3stlp8ruko" path="res://assets/icon_color.svg" id="3_ql8oy"]
+
+[node name="UiMain" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Interact" type="PanelContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/Interact"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/Interact/MarginContainer"]
+layout_mode = 2
+script = ExtResource("1_ltdu2")
+
+[node name="Header" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/Interact/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Menu"
+horizontal_alignment = 1
+
+[node name="ButtonResume" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2/Interact/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
+
+[node name="ButtonExit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer2/Interact/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Exit"
+
+[node name="SPACER" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Controls" type="PanelContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Controls"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Controls/MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Controls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Controls"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Controls/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Action" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Controls/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Menu / Pause"
+
+[node name="Key" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Controls/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Escape"
+horizontal_alignment = 1
+
+[node name="SPACER2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Credits" type="PanelContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Credits"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Credits/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Credits/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Game by"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" parent="MarginContainer/HBoxContainer/VBoxContainer/Credits/MarginContainer/VBoxContainer" instance=ExtResource("1_g571m")]
+layout_mode = 2
+script = ExtResource("2_aqwsh")
+person = "Rabbit"
+url = "https://hare.itch.io/"
+
+[node name="HBoxContainer3" parent="MarginContainer/HBoxContainer/VBoxContainer/Credits/MarginContainer/VBoxContainer" instance=ExtResource("1_g571m")]
+layout_mode = 2
+script = ExtResource("2_aqwsh")
+person = "Alex"
+url = "https://jelloboy.itch.io/"
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Credits/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Source Code"
+horizontal_alignment = 1
+
+[node name="LinkButton3" type="LinkButton" parent="MarginContainer/HBoxContainer/VBoxContainer/Credits/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "https://github.com/zhangalexh/RabboAlexPirate"
+uri = "https://github.com/zhangalexh/RabboAlexPirate"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/Credits/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Credits/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Made in
+Godot 4.2.1"
+horizontal_alignment = 2
+
+[node name="GodotIcon" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/Credits/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+texture = ExtResource("3_ql8oy")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Credits/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Made for
+Pirate Software - Game Jam 14"

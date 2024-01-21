@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c1nu54eu4mys2"]
+
+[sub_resource type="Gradient" id="Gradient_sydm7"]
+colors = PackedColorArray(0.626057, 0.368901, 0.450245, 1, 0.24276, 0.28, 0.2212, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_cxxs2"]
+gradient = SubResource("Gradient_sydm7")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0, 2)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbukb"]
+texture = SubResource("GradientTexture2D_cxxs2")
+
+[resource]
+default_font_size = 24
+MarginContainer/constants/margin_bottom = 8
+MarginContainer/constants/margin_left = 8
+MarginContainer/constants/margin_right = 8
+MarginContainer/constants/margin_top = 8
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_lbukb")

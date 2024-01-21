@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bo0457gq5p4f6"]
+
+[node name="HBoxContainer2" type="HBoxContainer"]
+offset_right = 358.0
+offset_bottom = 23.0
+alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rabbit"
+
+[node name="Link" type="LinkButton" parent="."]
+layout_mode = 2
+text = "https://hare.itch.io/"
+uri = "https://hare.itch.io/"
